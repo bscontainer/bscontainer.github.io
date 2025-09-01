@@ -619,3 +619,21 @@ header .call-btn {
     padding: 15px 0;
   }
 }
+/* === 햄버거 버튼 === */
+.hamburger {
+  display: none; /* PC에선 숨김 */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-right: 15px;
+}
+
+/* 모바일에서만 보이게 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
