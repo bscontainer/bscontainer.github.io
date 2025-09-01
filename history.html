@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연혁 | BS 부산컨테이너</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+<section class="banner">
+    <div class="banner-content">
+        <h1>회사 연혁</h1>
+    </div>
+</section>
+<section class="services">
+    <div class="service"><h3>2025</h3><p>부산 No.1 컨테이너 전문업체 선정</p></div>
+    <div class="service"><h3>2020</h3><p>맞춤 제작 서비스 확대</p></div>
+    <div class="service"><h3>2010</h3><p>BS 부산컨테이너 창립</p></div>
+</section>
+<footer>
+    <p>2025 BS 부산컨테이너. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

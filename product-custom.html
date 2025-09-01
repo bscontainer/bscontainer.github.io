@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>주문제작 | BS 부산컨테이너</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+</header>
+<section class="banner">
+    <div class="banner-content">
+        <h1>주문제작</h1>
+        <p>주문제작 컨테이너 소개 페이지</p>
+    </div>
+</section>
+<section class="services">
+    <div class="service">
+        <h3>주문제작</h3>
+    </div>
+</section>
+<footer>
+    <p>2025 BS 부산컨테이너. All Rights Reserved.</p>
+</footer>
+<script>
+    // ✅ header.html 불러오기
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

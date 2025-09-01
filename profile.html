@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>대표자 프로필 | BS 부산컨테이너</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<<div id="header"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+<section class="banner">
+  <div class="banner-content">
+    <h1>대표자 프로필</h1>
+  </div>
+</section>
+<section class="services">
+  <div class="service">
+    <h3>대표 인사말</h3>
+    <p>안녕하십니까. BS 부산컨테이너 대표 ○○○입니다. 고객의 신뢰와 품질을 최우선 가치로 삼아 20년간 컨테이너 산업을 이끌어왔습니다.</p>
+  </div>
+  <div class="service">
+    <h3>경영 철학</h3>
+    <p>고객 만족을 넘어 고객 감동을 실현하기 위해, 언제나 최고의 품질과 최적의 서비스를 제공하겠습니다.</p>
+  </div>
+</section>
+<footer>
+  <p>2025 BS 부산컨테이너. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
