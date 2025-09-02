@@ -15,8 +15,13 @@
     <a href="index.html" class="logo">
       <img src="logo.png" alt="BS 부산컨테이너 로고">
     </a>
-       <button class="hamburger" aria-label="메뉴 열기">☰</button>
+     
   </div>
+      <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <!-- 내비게이션 -->
 <div class="menu"></div> 
     <nav>
@@ -100,15 +105,13 @@
         <p>이메일: info@bscontainer.co.kr</p>
         <p>주소: 부산 강서구 식만로93번길 49</p>
     </footer>
-        <script>
-  // ✅ 햄버거 버튼 클릭 이벤트
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector("nav");
+    <script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
 
-  hamburger.addEventListener("click", () => {
-    nav.classList.toggle("active");
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
   });
 </script>
-
 </body>
 </html>
