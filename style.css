@@ -447,7 +447,7 @@ header .call-btn {
         display: block;
         position: absolute;
         left: 51%;
-        top: 14px;  /* 로고 높이에 맞게 조정 */
+        top: 13px;  /* 로고 높이에 맞게 조정 */
         transform: translateX(-50%);
         font-weight: 800;
         font-size: 2.3rem;
