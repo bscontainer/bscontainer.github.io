@@ -525,7 +525,7 @@ header .call-btn {
     .banner .subtitle { font-size: 1.3rem; top: 40px; }
     .banner h1 { font-size: 2.4rem; top: 75px; }
     .banner .tagline { font-size: 1rem; top: 140px; }
-    .btn-estimate { bottom: 87px; padding: 4px 14px; }
+    .btn-estimate { bottom: 82.5px; padding: 4px 14px; }
     .btn-estimate .main-text { font-size: 1.1rem; }
     .btn-estimate .sub-text { font-size: 0.7rem; }
     .highlights { gap: 10px; bottom: 25px; flex-wrap: wrap; justify-content: center; }
