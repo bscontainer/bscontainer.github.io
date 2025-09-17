@@ -549,7 +549,7 @@ header .call-btn {
 
   header nav {
     position: absolute;
-    left: 50%;
+    left:60%;
     top: 0;
     transform: translateX(-50%);
     height: 100%;
