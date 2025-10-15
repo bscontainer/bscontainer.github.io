@@ -455,24 +455,39 @@ header .call-btn {
     }
 }
 
-    nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 55%;
-        height: 100%;
-        background: #fff;
-        box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-top: 60px;
-        transition: right 0.3s ease;
-        z-index: 1000;
-    }
+   /* === 모바일 메뉴 기본 상태 === */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease;
+}
 
-    nav.active { display: flex; right: 0; }
+/* === 열릴 때 (오른쪽 → 왼쪽 자연스러운 슬라이드) === */
+nav.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* === 닫힐 때 (왼쪽 → 오른쪽으로 자연스럽게 사라짐) === */
+nav.closing {
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+}
 
     nav ul {
         flex-direction: column;
@@ -555,5 +570,12 @@ header .call-btn {
     height: 100%;
     display: flex;
     align-items: center;
+  }
+}
+
+/* === 모바일에서 서브메뉴 hover 이동 애니메이션 제거 === */
+@media (max-width: 768px) {
+  nav ul li:hover .submenu {
+    transform: none !important;
   }
 }
