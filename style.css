@@ -10,21 +10,23 @@ body {
 }
 
 header {
-    background: #fff;
-    height: 80px;
-    border-bottom: 1px solid #eee;
-    display:flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* 헤더를 배너 위로 표시 */
+    background: transparent; /* 배경을 투명하게 설정 */
+    padding: 0 20px; /* 배너 안에 헤더가 포함되도록 패딩 추가 */
+    box-shadow: none; /* 헤더의 경계선이나 그림자 제거 */
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 80px; /* 헤더 높이 */
     width: 100%;
-    padding: 0 20px;
 }
-
 .logo img {
     height: 90%;
     max-height: 72px;
@@ -68,7 +70,7 @@ nav ul li {
 nav ul li a {
     position: relative;
     text-decoration: none;
-    color: #333;
+    color: #dfd8d8;
     font-weight: 600;
     font-size: 1.3rem;
     padding: 0 15px;
@@ -178,11 +180,12 @@ nav ul li:hover .submenu {
 .banner {
     background: url("banner.jpg") no-repeat center center;
     background-size: cover;
-    height: 400px;
-    position: relative;
+    height: 100vh; /* 배너 높이를 화면 전체로 확장 */
+    position: relative; /* 배너의 상대적인 위치 */
     color: white;
     text-align: center;
-    z-index: 1;
+    z-index: 0; /* 배너가 헤더 아래로 오게 설정 */
+    height:700px;
 }
 
 .banner::after {
@@ -241,14 +244,14 @@ nav ul li:hover .submenu {
 
 .highlights {
     position: absolute;
-    bottom: 43px;
+    bottom: 200px;
     display: flex;
     gap: 30px;
 }
 /* === 빨간 버튼 === */
 .btn-estimate {
     position: absolute;
-    bottom: 122px;
+    bottom: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
