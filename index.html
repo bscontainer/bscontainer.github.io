@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BS 부산컨테이너 - 부산·경남 컨테이너 판매·임대·개조 전문</title>
-  <meta name="description" content="부산·경남 No.1 컨테이너 전문 업체, 일반·특수·중고 컨테이너 판매 및 임대, 맞춤 제작 개조 서비스. 신속 시공과 합리적 가격 제공.">
-  <meta name="keywords" content="부산 컨테이너, 컨테이너 판매, 컨테이너 임대, 컨테이너 개조, 맞춤 제작, 중고 컨테이너">
-  <meta name="author" content="BS 부산컨테이너">
 
-  <!-- Open Graph / SNS 공유 -->
+  <!-- Canonical (필수 추가) -->
+  <link rel="canonical" href="https://www.bscontainer.co.kr/">
 
+  <!-- 네이버 사이트 인증 (사이트 등록 후 코드 넣으셈) -->
+  <meta name="naver-site-verification" content="YOUR_NAVER_CODE_HERE">
+
+  <title>부산 컨테이너 판매·임대·개조 | BS 부산컨테이너</title>
+
+  <meta name="description" content="부산·경남 전문 컨테이너 판매, 임대, 개조, 맞춤 제작. 신속한 시공과 합리적 가격 제공. BS 부산컨테이너 공식 홈페이지.">
+
+  <!-- keywords는 의미 거의 없음 → 삭제 -->
+  <!-- <meta name="keywords" content=""> -->
+
+  <!-- Open Graph / SNS -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="BS 부산컨테이너 - 부산·경남 컨테이너 전문 업체">
   <meta property="og:description" content="부산·경남 No.1 컨테이너 전문 업체, 판매·임대·개조·맞춤 제작 서비스 제공. 합리적 가격과 신속 시공 보장.">
+
+  <!-- OG 이미지 로컬 경로 삭제 → 실제 업로드 경로로 변경 -->
+  <meta property="og:image" content="https://www.bscontainer.co.kr/images/banner.jpg">
   <meta property="og:url" content="https://www.bscontainer.co.kr">
-  <meta property="og:image" content="/Users/minjihun/Desktop/부산컨테이너/banner.jpg">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BS 부산컨테이너 - 부산·경남 컨테이너 전문 업체">
-  <meta name="twitter:description" content="부산·경남 No.1 컨테이너 전문 업체, 판매·임대·개조·맞춤 제작 서비스 제공. 합리적 가격과 신속 시공 보장.">
-  <meta name="twitter:image" content="https://www.bscontainer.co.kr/og-image.jpg">
+  <meta name="twitter:description" content="부산·경남 No.1 컨테이너 전문 업체, 판매·임대·개조·맞춤 제작 서비스 제공.">
+  <meta name="twitter:image" content="https://www.bscontainer.co.kr/images/og-image.jpg">
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Schema.org JSON-LD -->
-
+  <!-- Schema.org: Organization (기존 유지) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "BS 부산컨테이너",
-    "url": "http://www.bscontainer.co.kr",
-    "logo": "http://www.bscontainer.co.kr/logo.png",
+    "url": "https://www.bscontainer.co.kr",
+    "logo": "https://www.bscontainer.co.kr/logo.png",
     "sameAs": [
       "https://www.instagram.com/bs_container/",
       "https://king031172.tistory.com/"
@@ -51,29 +60,89 @@
   }
   </script>
 
+  <!-- Schema: Breadcrumb (추가) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "홈",
+        "item": "https://www.bscontainer.co.kr/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: 서비스 정보 (추가) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "컨테이너 판매 및 임대 서비스",
+    "serviceType": "컨테이너 판매, 임대, 개조",
+    "provider": {
+      "@type": "Organization",
+      "name": "BS 부산컨테이너",
+      "url": "https://www.bscontainer.co.kr"
+    },
+    "areaServed": "부산, 경남"
+  }
+  </script>
+
+  <!-- FAQ Schema (추가) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "컨테이너 배송 기간은 얼마나 걸리나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "부산 지역 기준 1~2일 이내로 배송 가능합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "맞춤 제작도 가능한가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "네, 사무실·창고·휴게실 등 다양한 형태로 맞춤 제작 가능합니다."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 <header>
   <div class="container">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="BS 부산컨테이너 로고">
+      <img src="logo.png" alt="BS 부산컨테이너 로고" width="160" height="60" loading="lazy">
     </a>
     <span class="site-title">부산 컨테이너</span>
     <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
   </div>
+
   <nav>
     <ul>
-      <li><a href="profile.html">회사소개</a>
+      <li>
+        <a href="profile.html">회사소개</a>
         <ul class="submenu">
           <li><a href="profile.html">대표자 프로필</a></li>
           <li><a href="history.html">연혁</a></li>
         </ul>
       </li>
-      <li><a href="product-general.html">제품안내</a>
+
+      <li>
+        <a href="product-general.html">제품안내</a>
         <ul class="submenu submenu-product">
           <li><a href="product-general.html">일반 컨테이너</a></li>
           <li><a href="product-special.html">특수 컨테이너</a></li>
@@ -83,13 +152,17 @@
           <li><a href="product-parts.html">컨테이너 부품</a></li>
         </ul>
       </li>
-      <li><a href="service1.html">서비스</a>
+
+      <li>
+        <a href="service1.html">서비스</a>
         <ul class="submenu">
           <li><a href="service1.html">컨테이너 맞춤 제작</a></li>
           <li><a href="service2.html">개조/인테리어 서비스</a></li>
         </ul>
       </li>
-      <li><a href="https://king031172.tistory.com/">보러가기</a>
+
+      <li>
+        <a href="https://king031172.tistory.com/">보러가기</a>
         <ul class="submenu">
           <li><a href="https://king031172.tistory.com/">블로그</a></li>
           <li><a href="https://www.instagram.com/bs_container/">인스타그램</a></li>
@@ -104,6 +177,7 @@
     <p class="subtitle">부산 · 경남 No.1 컨테이너 전문업체</p>
     <h1><span class="highlight-text">부산</span> <span class="highlight-text">컨테이너</span></h1>
     <p class="tagline">최고의 품질 · 믿을 수 있는 서비스 · 전국 어디든</p>
+
     <div class="buttons">
       <a href="tel:051-972-9727" class="btn-estimate">
         <span class="btn-inner">
@@ -112,6 +186,7 @@
         </span>
       </a>
     </div>
+
     <div class="highlights">
       <div class="highlight">합리적 가격</div>
       <div class="highlight">신속 시공</div>
@@ -124,18 +199,20 @@
 <section class="services">
   <div class="service">
     <h2>컨테이너 판매</h2>
-    <img src="service-sale.jpg" alt="부산 컨테이너 판매 이미지">
-    <p>일반, 특수, 중고 컨테이너를 합리적 가격으로 판매하며, 빠른 납품과 신뢰성 있는 서비스 제공합니다.</p>
+    <img src="service-sale.jpg" width="800" height="500" loading="lazy" alt="부산 컨테이너 판매 서비스">
+    <p>일반, 특수, 중고 컨테이너를 합리적인 가격으로 제공합니다.</p>
   </div>
+
   <div class="service">
     <h2>컨테이너 임대</h2>
-    <img src="service-rental.jpg" alt="부산 컨테이너 임대 이미지">
-    <p>공사현장, 창고, 사무실 용도로 다양한 크기의 임대 컨테이너를 신속하게 제공합니다.</p>
+    <img src="service-rental.jpg" width="800" height="500" loading="lazy" alt="부산 컨테이너 임대 서비스">
+    <p>공사현장, 사무실, 창고용 임대 컨테이너를 신속하게 제공합니다.</p>
   </div>
+
   <div class="service">
     <h2>개조 및 맞춤 제작</h2>
-    <img src="service-custom.jpg" alt="부산 컨테이너 개조 이미지">
-    <p>고객 요구에 맞춘 컨테이너 개조 및 인테리어 제작 서비스로, 맞춤형 설계와 시공을 지원합니다.</p>
+    <img src="service-custom.jpg" width="800" height="500" loading="lazy" alt="부산 컨테이너 개조 및 맞춤 제작">
+    <p>고객 요구에 맞춘 개조 및 디자인 컨테이너를 제작합니다.</p>
   </div>
 </section>
 
@@ -150,6 +227,7 @@
 <script>
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');
+
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
