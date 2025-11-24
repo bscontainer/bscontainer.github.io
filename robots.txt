@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-Sitemap: https://www.bscontainer.github.io/sitemap.xml
+Sitemap: https://bscontainer.github.io/sitemap.xml
