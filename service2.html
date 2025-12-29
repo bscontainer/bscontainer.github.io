@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>개조/인테리어 서비스 | BS 부산컨테이너</title>
+  <meta name="description" content="컨테이너 단열·방음 보강, 창·도어 이동, 내부 마감과 인테리어, 배선 재정비까지 올인원 개조 서비스.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">Service</p>
+      <h1>개조 / 인테리어</h1>
+      <p>기존 컨테이너의 단열 보강부터 인테리어, 배선 재정비까지 올인원으로 진행합니다.</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>개조</h3>
+        <ul class="sub-bullets">
+          <li>창·도어 이동/추가, 단열·방음 보강</li>
+          <li>바닥·내벽 마감 교체, 외관 리뉴얼</li>
+          <li>배선·조명·환기 재배치</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>인테리어</h3>
+        <ul class="sub-bullets">
+          <li>목공/도장/바닥재/조명 패키지</li>
+          <li>가구·설비 배치 컨설팅</li>
+          <li>브랜딩/사인물 제작 지원</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>지원</h3>
+        <ul class="sub-bullets">
+          <li>현장 실측 및 견적/일정 공유</li>
+          <li>전국 시공팀 방문, 긴급 A/S 대응</li>
+          <li>필요 시 이동/이전 설치 지원</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+</body>
+</html>

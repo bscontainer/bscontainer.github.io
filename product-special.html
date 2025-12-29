@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>특수컨테이너 | BS 부산컨테이너</title>
+    <meta name="description" content="냉장·방폭·기계실 등 특수 목적 컨테이너 설계·제작 서비스. 자재·배선·환기 맞춤 설계 지원.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">Product</p>
+      <h1>특수 컨테이너</h1>
+      <p>냉장·방폭·기계실 등 현장 목적에 맞춘 스펙으로 설계·제작합니다.</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>제작 유형</h3>
+        <ul class="sub-bullets">
+          <li>냉장/냉동, 방폭, 발전기·펌프 기계실</li>
+          <li>방음 스튜디오, 특수 장비 보관</li>
+          <li>현장 실험실/사무실 하이브리드</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>설계 포인트</h3>
+        <ul class="sub-bullets">
+          <li>단열·차음·방습 자재 최적 조합</li>
+          <li>배선·환기·배기 동선 맞춤 설계</li>
+          <li>안전 규격(전기/소방) 준수 시공</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>지원</h3>
+        <p>요구 스펙 도면화 후 제작·운송·설치까지 일괄 진행합니다.</p>
+        <ul class="sub-bullets">
+          <li>현장 실측 및 구조 제안</li>
+          <li>시험 가동·인수 지원</li>
+          <li>긴급 A/S 대응 네트워크</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+</body>
+</html>

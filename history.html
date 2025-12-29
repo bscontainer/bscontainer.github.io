@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연혁 | BS 부산컨테이너</title>
+    <meta name="description" content="BS 부산컨테이너 창립부터 현재까지의 성장 연혁과 서비스 확장 기록.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">History</p>
+      <h1>회사 연혁</h1>
+      <p>창립부터 지금까지, 안전과 신뢰를 기준으로 성장해온 발자취입니다.</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>주요 연혁</h3>
+        <ul class="timeline">
+          <li><span class="year">2025</span><span class="desc">부산·경남 No.1 컨테이너 전문업체 선정, 전국 시공팀 확충</span></li>
+          <li><span class="year">2023</span><span class="desc">특수/맞춤 컨테이너 설계팀 신설, 공정 관리 시스템 개선</span></li>
+          <li><span class="year">2020</span><span class="desc">맞춤 제작 서비스 확대, 단열/방음 모듈 라인 업그레이드</span></li>
+          <li><span class="year">2016</span><span class="desc">중고·임대 컨테이너 전담팀 운영, A/S 체계 강화</span></li>
+          <li><span class="year">2010</span><span class="desc">BS 부산컨테이너 창립, 부산·경남 기반 시공 시작</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>현재의 BS</h3>
+        <ul class="sub-bullets">
+          <li>판매·임대·개조를 아우르는 원스톱 컨테이너 솔루션</li>
+          <li>전국 대응 시공팀과 긴급 A/S 네트워크 운용</li>
+          <li>현장 실측 → 설계 → 제작 → 설치 → 사후관리 일괄 수행</li>
+        </ul>
+        <p style="margin-top:12px; color:#4a5565;">앞으로도 투명한 견적과 신속한 시공으로 신뢰를 이어가겠습니다.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+</body>
+</html>

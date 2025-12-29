@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>임대컨테이너 | BS 부산컨테이너</title>
+    <meta name="description" content="사무·창고·휴게용 임대 컨테이너를 운송·설치·철거까지 원스톱 제공. 단열·창호 보강 옵션 가능.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">Product</p>
+      <h1>임대 컨테이너</h1>
+      <p>필요 기간만큼 합리적으로, 바로 설치 가능한 임대 컨테이너를 제공합니다.</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>임대 유형</h3>
+        <ul class="sub-bullets">
+          <li>사무/휴게/창고용 표준 컨테이너</li>
+          <li>단열·창호 보강형 옵션</li>
+          <li>전기·조명 포함 세팅형</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>서비스</h3>
+        <ul class="sub-bullets">
+          <li>운송·설치·철거 원스톱 지원</li>
+          <li>필요 시 내부 청소/도장 후 납품</li>
+          <li>렌탈 기간 중 점검 및 A/S 지원</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>추천 현장</h3>
+        <ul class="sub-bullets">
+          <li>공사 현장 사무실·휴게실</li>
+          <li>임시 창고·부스·안내소</li>
+          <li>단기 프로젝트/팝업 스토어</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+</body>
+</html>

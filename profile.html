@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>대표자 프로필 | BS 부산컨테이너</title>
+  <meta name="description" content="BS 부산컨테이너 대표 프로필과 경영 철학, 현장 경험 기반 맞춤 컨테이너 솔루션 소개.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">About BS CONTAINER</p>
+      <h1>대표자 프로필</h1>
+      <p>현장 경험과 품질 원칙을 바탕으로 맞춤 컨테이너 솔루션을 제안합니다.</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>대표 인사말</h3>
+        <p>안녕하십니까, BS 부산컨테이너 대표 민현식입니다. 창립 이후 한결같이 “안전한 제작 · 투명한 견적 · 빠른 A/S”라는 원칙으로 현장을 지켜왔습니다.</p>
+        <ul class="sub-bullets">
+          <li>현장 상황에 맞춘 실측·설계 제안</li>
+          <li>자재·공정 공개로 예산·일정 투명 관리</li>
+          <li>시공 이후까지 책임지는 장기 파트너십</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>경영 철학</h3>
+        <p>고객의 안전과 효율을 최우선으로 삼아, 쓰임새에 맞는 최적의 단열·배선·동선 설계를 제공합니다.</p>
+        <ul class="sub-bullets">
+          <li>현장 특성을 반영한 모듈 설계</li>
+          <li>품질/예산 균형을 맞춘 자재 제안</li>
+          <li>전국 어디든 동일한 품질의 시공과 A/S</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>주요 이력</h3>
+        <ul class="sub-bullets">
+          <li>20년 이상 컨테이너 제작·개조·임대 운영</li>
+          <li>부산·경남 공공 및 민간 현장 다수 시공</li>
+          <li>특수 컨테이너·맞춤 모듈 설계 프로젝트 리딩</li>
+        </ul>
+        <p style="margin-top:12px; color:#4a5565;">현장 경험을 바탕으로 합리적 견적과 빠른 실행으로 보답하겠습니다.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+</body>
+</html>

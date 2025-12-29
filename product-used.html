@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>중고컨테이너 | BS 부산컨테이너</title>
+    <meta name="description" content="점검·보강을 마친 중고 컨테이너를 합리적 가격으로 공급. 단열·창호·전기 옵션 맞춤 제공.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">Product</p>
+      <h1>중고 컨테이너</h1>
+      <p>상태 점검을 마친 중고 컨테이너를 합리적 가격에 제공합니다.</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>검수 기준</h3>
+        <ul class="sub-bullets">
+          <li>외벽/바닥 부식·누수 여부 점검</li>
+          <li>단열/창호 상태 확인 및 필요 시 보강</li>
+          <li>도장/청소 후 출고</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>옵션</h3>
+        <ul class="sub-bullets">
+          <li>내부 단열 추가, 도어/창 교체</li>
+          <li>전기 배선·조명·에어컨 설치</li>
+          <li>내부 칸막이·바닥 마감 선택</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>추천 활용</h3>
+        <ul class="sub-bullets">
+          <li>현장 사무실, 창고, 임시 휴게공간</li>
+          <li>소규모 작업실·공방</li>
+          <li>비상/임시 수납 공간</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+</body>
+</html>
