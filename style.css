@@ -424,6 +424,7 @@ nav ul li:hover .submenu {
 .btn-estimate .main-text {
     font-size: 1rem;
     margin-bottom: 0;
+    white-space: nowrap;
 }
 
 .btn-estimate .sub-text {
@@ -452,7 +453,7 @@ nav ul li:hover .submenu {
 
 .hero-badges {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
     margin-top: 6px;
 }
@@ -477,6 +478,7 @@ nav ul li:hover .submenu {
 .hero-badges span {
     color: #cfd7e5;
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 /* === 서브페이지 공통 === */
