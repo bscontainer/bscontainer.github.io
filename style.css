@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,7 +34,7 @@ h1, h2, h3, p, li,
     overflow-wrap: break-word;
 }
 
-/* 문맥상 한 덩어리로 보여야 할 때 사용 (예: 줄바꿈 방지) */
+/* 臾몃㎘?????⑹뼱由щ줈 蹂댁뿬???????ъ슜 (?? 以꾨컮轅?諛⑹?) */
 .phrase,
 .keep-together,
 [data-phrase] {
@@ -47,17 +47,17 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* 헤더를 배너 위로 표시 */
-    background: transparent; /* 배경을 투명하게 설정 */
-    padding: 0 20px; /* 배너 안에 헤더가 포함되도록 패딩 추가 */
-    box-shadow: none; /* 헤더의 경계선이나 그림자 제거 */
+    z-index: 10; /* ?ㅻ뜑瑜?諛곕꼫 ?꾨줈 ?쒖떆 */
+    background: transparent; /* 諛곌꼍???щ챸?섍쾶 ?ㅼ젙 */
+    padding: 0 20px; /* 諛곕꼫 ?덉뿉 ?ㅻ뜑媛 ?ы븿?섎룄濡??⑤뵫 異붽? */
+    box-shadow: none; /* ?ㅻ뜑??寃쎄퀎?좎씠??洹몃┝???쒓굅 */
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px; /* 헤더 높이 */
+    height: 80px; /* ?ㅻ뜑 ?믪씠 */
     width: 100%;
     position: relative;
 }
@@ -69,7 +69,7 @@ header .container {
     display: block;
 }
 
-/* 🔹 PC 기본값에서는 "부산 컨테이너" 숨김 */
+/* ?뵻 PC 湲곕낯媛믪뿉?쒕뒗 "遺??而⑦뀒?대꼫" ?④? */
 .mobile-title {
     display: none;
 }
@@ -82,9 +82,9 @@ header .menu {
 
 nav {
     display:flex;
-    justify-content: center;  /* 가운데 정렬 */
+    justify-content: center;  /* 媛?대뜲 ?뺣젹 */
     flex: 1;
-    margin-left: 0;           /* 기존 강제 이동 제거 */
+    margin-left: 0;           /* 湲곗〈 媛뺤젣 ?대룞 ?쒓굅 */
 }
 
 nav ul {
@@ -100,7 +100,7 @@ nav ul li {
     position:relative;
 }
 
-/* === 메뉴 hover 밑줄 애니메이션 === */
+/* === 硫붾돱 hover 諛묒쨪 ?좊땲硫붿씠??=== */
 nav ul li a {
     position: relative;
     text-decoration: none;
@@ -132,7 +132,7 @@ nav ul li a:hover {
 nav ul li a:hover::after {
     width: 90%;
 }
-/* === 서브메뉴 === */
+/* === ?쒕툕硫붾돱 === */
 .submenu {
     display: grid;
     grid-template-columns: repeat(1, auto);
@@ -162,7 +162,7 @@ nav ul li:hover .submenu {
     transition-delay: 0.05s;
 }
 
-/* 제품안내 전용 3|3 정렬 */
+/* ?쒗뭹?덈궡 ?꾩슜 3|3 ?뺣젹 */
 .submenu-product {
     grid-template-columns: repeat(2, auto);
     min-width: 360px;
@@ -204,7 +204,7 @@ nav ul li:hover .submenu {
     background: #b71c1c;
 }
 
-/* === 플로팅 콜 버튼 === */
+/* === ?뚮줈??肄?踰꾪듉 === */
 .floating-call {
     position: fixed;
     right: 18px;
@@ -251,7 +251,7 @@ nav ul li:hover .submenu {
     }
   }
 
-/* === 히어로 === */
+/* === ?덉뼱濡?=== */
 .banner.hero {
     position: relative;
     min-height: 86vh;
@@ -439,7 +439,7 @@ nav ul li:hover .submenu {
 }
 
 .btn-ghost {
-    padding: 10px 16px; /* 파란 버튼과 동일 높이 */
+    padding: 10px 16px; /* ?뚮? 踰꾪듉怨??숈씪 ?믪씠 */
     border: 1px solid rgba(255,255,255,0.32);
     color: #e8edf6;
     background: rgba(255,255,255,0.08);
@@ -481,7 +481,7 @@ nav ul li:hover .submenu {
     white-space: nowrap;
 }
 
-/* === 서브페이지 공통 === */
+/* === ?쒕툕?섏씠吏 怨듯넻 === */
 .sub-hero {
     position: relative;
     padding: 120px 22px 90px;
@@ -554,12 +554,13 @@ nav ul li:hover .submenu {
     line-height: 1.6;
 }
 
-/* === 일반컨테이너 대표사진 === */
+/* === ?쇰컲而⑦뀒?대꼫 ??쒖궗吏?=== */
 .photo-section {
     margin-top: 24px;
 }
 
 .photo-card {
+    position: relative;
     background: #fff;
     border: 1px solid rgba(12,29,52,0.08);
     border-radius: 16px;
@@ -567,20 +568,44 @@ nav ul li:hover .submenu {
     box-shadow: var(--shadow-soft);
 }
 
+.photo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,19,44,0.38) 0%, rgba(6,19,44,0.58) 100%);
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
 .photo-card img {
     width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.1) saturate(0.85);
+    transition: filter 0.25s ease;
+}
+
+.photo-card:hover img {
+    filter: brightness(1.08) contrast(1.12) saturate(1.08);
+}
+
+.photo-card:hover::after {
+    opacity: 0.08;
 }
 
 .photo-caption {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    justify-content: center;
+    gap: 4px;
     padding: 12px 16px 14px;
     color: #2f3f55;
     font-size: 0.95rem;
+    text-align: center;
 }
 
 .photo-caption strong {
@@ -592,9 +617,7 @@ nav ul li:hover .submenu {
     color: #5a6a7e;
     font-weight: 600;
     white-space: nowrap;
-}
-
-/* 비교 카드 전용 스타일 */
+}/* 鍮꾧탳 移대뱶 ?꾩슜 ?ㅽ???*/
 .info-compare .info-card {
     background: linear-gradient(145deg, rgba(12,29,52,0.9), rgba(15,35,60,0.92));
     border: 1px solid rgba(255,255,255,0.12);
@@ -607,7 +630,7 @@ nav ul li:hover .submenu {
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* 비교 영역 여백 보정 */
+/* 鍮꾧탳 ?곸뿭 ?щ갚 蹂댁젙 */
 .info-compare {
     margin-top: 32px !important;
 }
@@ -663,7 +686,7 @@ nav ul li:hover .submenu {
 }
 
 .sub-bullets li::before {
-    content: "•";
+    content: "??;
     position: absolute;
     left: 0;
     color: #e53935;
@@ -753,7 +776,7 @@ nav ul li:hover .submenu {
   }
 }
 
-/* === 섹션 공통 === */
+/* === ?뱀뀡 怨듯넻 === */
 .section-header {
     text-align: center;
     margin: 60px auto 24px;
@@ -799,7 +822,7 @@ nav ul li:hover .submenu {
     letter-spacing: -0.01em;
 }
 
-/* 한 줄 강조 유틸 */
+/* ??以?媛뺤“ ?좏떥 */
 .highlight-line {
     display: block;
     white-space: normal;
@@ -812,7 +835,7 @@ nav ul li:hover .submenu {
     text-align: center;
 }
 
-/* === 서비스 카드 === */
+/* === ?쒕퉬??移대뱶 === */
 .services {
     max-width: 1180px;
     margin: 160px auto 70px;
@@ -863,7 +886,7 @@ nav ul li:hover .submenu {
     box-shadow: 0 16px 36px rgba(12, 29, 52, 0.16);
 }
 
-/* === 네트워크 섹션 === */
+/* === ?ㅽ듃?뚰겕 ?뱀뀡 === */
 .network {
     max-width: 1180px;
     margin: 0 auto 70px;
@@ -902,7 +925,7 @@ nav ul li:hover .submenu {
     font-size: 0.98rem;
 }
 
-/* === 애니메이션 공통 === */
+/* === ?좊땲硫붿씠??怨듯넻 === */
 @keyframes fadeSlideUp {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -939,7 +962,7 @@ header .logo img {
     right: 0;
 }
 
-/* === 반응형 === */
+/* === 諛섏쓳??=== */
 @media (max-width: 768px) {
   body {
     background: #0d2340;
@@ -961,7 +984,7 @@ header .logo img {
     border-radius: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 18px 38px rgba(0,0,0,0.32);
-    margin-top: 28px; /* 배너 내 박스를 더 아래로 */
+    margin-top: 28px; /* 諛곕꼫 ??諛뺤뒪瑜????꾨옒濡?*/
   }
 
   .eyebrow {
@@ -990,7 +1013,7 @@ header .logo img {
     padding: 9px 12px;
   }
 
-  /* 모바일: 본문 가독성 보강 */
+  /* 紐⑤컮?? 蹂몃Ц 媛?낆꽦 蹂닿컯 */
   .section-header .eyebrow {
     background: rgba(255,255,255,0.12);
     color: #f5f7fb;
@@ -1028,13 +1051,13 @@ header .logo img {
   .network .panel h3 { color: #ffdfd6; }
   .network .panel p  { color: #e6edf7; }
 
-  /* 모바일: CTA 버튼 높이 통일 */
+  /* 紐⑤컮?? CTA 踰꾪듉 ?믪씠 ?듭씪 */
   .hero-ctas .btn-ghost,
   .hero-ctas .btn-estimate {
     min-height: 56px;
   }
 
-  /* 모바일: 상담 버튼 텍스트 세로 정렬 */
+  /* 紐⑤컮?? ?곷떞 踰꾪듉 ?띿뒪???몃줈 ?뺣젹 */
   .btn-estimate {
     flex-direction: column;
     align-items: center;
@@ -1138,7 +1161,7 @@ header .logo img {
     background: transparent;
     border: none;
     box-shadow: none;
-    pointer-events: none; /* 메인 메뉴 클릭 비활성화 */
+    pointer-events: none; /* 硫붿씤 硫붾돱 ?대┃ 鍮꾪솢?깊솕 */
     cursor: default;
     transition: none;
     position: relative;
@@ -1188,7 +1211,7 @@ header .logo img {
     color: #f5f7fb;
     background: rgba(255,255,255,0.08);
     border-radius: 10px;
-    pointer-events: auto; /* 서브메뉴는 클릭 가능 */
+    pointer-events: auto; /* ?쒕툕硫붾돱???대┃ 媛??*/
     transition: none;
     transform: none !important;
     text-align: center;
@@ -1196,7 +1219,7 @@ header .logo img {
   }
 
   .submenu li a::before {
-    content: "›";
+    content: "??;
     color: #e53935;
     font-weight: 800;
     display: inline-block;
@@ -1204,7 +1227,7 @@ header .logo img {
 
   .submenu li a::after { display: none !important; content: "" !important; }
 
-  /* 모바일 메뉴 hover/클릭/이동 완전 차단 */
+  /* 紐⑤컮??硫붾돱 hover/?대┃/?대룞 ?꾩쟾 李⑤떒 */
   nav ul li,
   nav ul li a,
   .submenu li,
@@ -1269,7 +1292,7 @@ header .logo img {
     background: transparent;
     backdrop-filter: none;
     z-index: 900;
-    pointer-events: none; /* 오버레이만 표시 */
+    pointer-events: none; /* ?ㅻ쾭?덉씠留??쒖떆 */
   }
 
   .nav-overlay {
@@ -1302,13 +1325,13 @@ header .logo img {
     transform-origin: center;
   }
 
-  /* 네비 열렸을 때 햄버거 색상 대비 강화 */
+  /* ?ㅻ퉬 ?대졇?????꾨쾭嫄??됱긽 ?鍮?媛뺥솕 */
   body.nav-open .hamburger span {
     background: #e53935;
     box-shadow: 0 1px 3px rgba(0,0,0,0.18);
   }
 
-  /* 햄버거 메뉴 hover/클릭 효과 전면 차단 */
+  /* ?꾨쾭嫄?硫붾돱 hover/?대┃ ?④낵 ?꾨㈃ 李⑤떒 */
   nav ul li,
   nav ul li *,
   .submenu,
@@ -1330,7 +1353,7 @@ header .logo img {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* 모바일: 본문 대비 개선 */
+  /* 紐⑤컮?? 蹂몃Ц ?鍮?媛쒖꽑 */
   .section-header h2,
   .section-header p,
   .section-desc {
@@ -1403,7 +1426,7 @@ header .logo img {
     align-items: center;
   }
 
-  /* PC 서브메뉴 고급 스타일 */
+  /* PC ?쒕툕硫붾돱 怨좉툒 ?ㅽ???*/
   nav ul li:hover > a {
     color: #e53935;
   }
@@ -1470,3 +1493,4 @@ header .logo img {
     transform: scaleX(1);
   }
 }
+
