@@ -554,6 +554,46 @@ nav ul li:hover .submenu {
     line-height: 1.6;
 }
 
+/* === 일반컨테이너 대표사진 === */
+.photo-section {
+    margin-top: 24px;
+}
+
+.photo-card {
+    background: #fff;
+    border: 1px solid rgba(12,29,52,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px 14px;
+    color: #2f3f55;
+    font-size: 0.95rem;
+}
+
+.photo-caption strong {
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.photo-caption span {
+    color: #5a6a7e;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 /* 비교 카드 전용 스타일 */
 .info-compare .info-card {
     background: linear-gradient(145deg, rgba(12,29,52,0.9), rgba(15,35,60,0.92));
