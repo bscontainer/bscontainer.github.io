@@ -686,7 +686,7 @@ nav ul li:hover .submenu {
 }
 
 .sub-bullets li::before {
-    content: "??;
+    content: "-";
     position: absolute;
     left: 0;
     color: #e53935;
@@ -1219,7 +1219,7 @@ header .logo img {
   }
 
   .submenu li a::before {
-    content: "??;
+    content: "-";
     color: #e53935;
     font-weight: 800;
     display: inline-block;
