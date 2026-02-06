@@ -34,7 +34,7 @@ h1, h2, h3, p, li,
     overflow-wrap: break-word;
 }
 
-/* 臾몃㎘?????⑹뼱由щ줈 蹂댁뿬???????ъ슜 (?? 以꾨컮轅?諛⑹?) */
+/* 기본 리셋 */
 .phrase,
 .keep-together,
 [data-phrase] {
@@ -47,17 +47,17 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* ?ㅻ뜑瑜?諛곕꼫 ?꾨줈 ?쒖떆 */
-    background: transparent; /* 諛곌꼍???щ챸?섍쾶 ?ㅼ젙 */
-    padding: 0 20px; /* 諛곕꼫 ?덉뿉 ?ㅻ뜑媛 ?ы븿?섎룄濡??⑤뵫 異붽? */
-    box-shadow: none; /* ?ㅻ뜑??寃쎄퀎?좎씠??洹몃┝???쒓굅 */
+    z-index: 10; /* 헤더 레이아웃 */
+    background: transparent; /* 헤더 레이아웃 */
+    padding: 0 20px; /* 헤더 레이아웃 */
+    box-shadow: none; /* 헤더 레이아웃 */
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px; /* ?ㅻ뜑 ?믪씠 */
+    height: 80px; /* 헤더 레이아웃 */
     width: 100%;
     position: relative;
 }
@@ -69,7 +69,7 @@ header .container {
     display: block;
 }
 
-/* ?뵻 PC 湲곕낯媛믪뿉?쒕뒗 "遺??而⑦뀒?대꼫" ?④? */
+/* 기본 리셋 */
 .mobile-title {
     display: none;
 }
@@ -82,9 +82,9 @@ header .menu {
 
 nav {
     display:flex;
-    justify-content: center;  /* 媛?대뜲 ?뺣젹 */
+    justify-content: center;  /* 헤더 레이아웃 */
     flex: 1;
-    margin-left: 0;           /* 湲곗〈 媛뺤젣 ?대룞 ?쒓굅 */
+    margin-left: 0;           /* 헤더 레이아웃 */
 }
 
 nav ul {
@@ -100,7 +100,7 @@ nav ul li {
     position:relative;
 }
 
-/* === 硫붾돱 hover 諛묒쨪 ?좊땲硫붿씠??=== */
+/* 기본 리셋 */
 nav ul li a {
     position: relative;
     text-decoration: none;
@@ -132,7 +132,7 @@ nav ul li a:hover {
 nav ul li a:hover::after {
     width: 90%;
 }
-/* === ?쒕툕硫붾돱 === */
+/* 기본 리셋 */
 .submenu {
     display: grid;
     grid-template-columns: repeat(1, auto);
@@ -162,7 +162,7 @@ nav ul li:hover .submenu {
     transition-delay: 0.05s;
 }
 
-/* ?쒗뭹?덈궡 ?꾩슜 3|3 ?뺣젹 */
+/* 기본 리셋 */
 .submenu-product {
     grid-template-columns: repeat(2, auto);
     min-width: 360px;
@@ -204,7 +204,7 @@ nav ul li:hover .submenu {
     background: #b71c1c;
 }
 
-/* === ?뚮줈??肄?踰꾪듉 === */
+/* 기본 리셋 */
 .floating-call {
     position: fixed;
     right: 18px;
@@ -251,7 +251,7 @@ nav ul li:hover .submenu {
     }
   }
 
-/* === ?덉뼱濡?=== */
+/* 기본 리셋 */
 .banner.hero {
     position: relative;
     min-height: 86vh;
@@ -439,7 +439,7 @@ nav ul li:hover .submenu {
 }
 
 .btn-ghost {
-    padding: 10px 16px; /* ?뚮? 踰꾪듉怨??숈씪 ?믪씠 */
+    padding: 10px 16px; /* 헤더 레이아웃 */
     border: 1px solid rgba(255,255,255,0.32);
     color: #e8edf6;
     background: rgba(255,255,255,0.08);
@@ -481,7 +481,7 @@ nav ul li:hover .submenu {
     white-space: nowrap;
 }
 
-/* === ?쒕툕?섏씠吏 怨듯넻 === */
+/* 기본 리셋 */
 .sub-hero {
     position: relative;
     padding: 120px 22px 90px;
@@ -554,7 +554,7 @@ nav ul li:hover .submenu {
     line-height: 1.6;
 }
 
-/* === ?쇰컲而⑦뀒?대꼫 ??쒖궗吏?=== */
+/* 기본 리셋 */
 .photo-section {
     margin-top: 24px;
 }
@@ -617,7 +617,7 @@ nav ul li:hover .submenu {
     color: #5a6a7e;
     font-weight: 600;
     white-space: nowrap;
-}/* 鍮꾧탳 移대뱶 ?꾩슜 ?ㅽ???*/
+}/* 헤더 레이아웃 */
 .info-compare .info-card {
     background: linear-gradient(145deg, rgba(12,29,52,0.9), rgba(15,35,60,0.92));
     border: 1px solid rgba(255,255,255,0.12);
@@ -630,7 +630,7 @@ nav ul li:hover .submenu {
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* 鍮꾧탳 ?곸뿭 ?щ갚 蹂댁젙 */
+/* 기본 리셋 */
 .info-compare {
     margin-top: 32px !important;
 }
@@ -776,7 +776,7 @@ nav ul li:hover .submenu {
   }
 }
 
-/* === ?뱀뀡 怨듯넻 === */
+/* 기본 리셋 */
 .section-header {
     text-align: center;
     margin: 60px auto 24px;
@@ -822,7 +822,7 @@ nav ul li:hover .submenu {
     letter-spacing: -0.01em;
 }
 
-/* ??以?媛뺤“ ?좏떥 */
+/* 기본 리셋 */
 .highlight-line {
     display: block;
     white-space: normal;
@@ -835,7 +835,7 @@ nav ul li:hover .submenu {
     text-align: center;
 }
 
-/* === ?쒕퉬??移대뱶 === */
+/* 기본 리셋 */
 .services {
     max-width: 1180px;
     margin: 160px auto 70px;
@@ -886,7 +886,7 @@ nav ul li:hover .submenu {
     box-shadow: 0 16px 36px rgba(12, 29, 52, 0.16);
 }
 
-/* === ?ㅽ듃?뚰겕 ?뱀뀡 === */
+/* 기본 리셋 */
 .network {
     max-width: 1180px;
     margin: 0 auto 70px;
@@ -925,7 +925,7 @@ nav ul li:hover .submenu {
     font-size: 0.98rem;
 }
 
-/* === ?좊땲硫붿씠??怨듯넻 === */
+/* 기본 리셋 */
 @keyframes fadeSlideUp {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -962,7 +962,7 @@ header .logo img {
     right: 0;
 }
 
-/* === 諛섏쓳??=== */
+/* 기본 리셋 */
 @media (max-width: 768px) {
   body {
     background: #0d2340;
@@ -984,7 +984,7 @@ header .logo img {
     border-radius: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 18px 38px rgba(0,0,0,0.32);
-    margin-top: 28px; /* 諛곕꼫 ??諛뺤뒪瑜????꾨옒濡?*/
+    margin-top: 28px; /* 헤더 레이아웃 */
   }
 
   .eyebrow {
@@ -1013,7 +1013,7 @@ header .logo img {
     padding: 9px 12px;
   }
 
-  /* 紐⑤컮?? 蹂몃Ц 媛?낆꽦 蹂닿컯 */
+  /* 기본 리셋 */
   .section-header .eyebrow {
     background: rgba(255,255,255,0.12);
     color: #f5f7fb;
@@ -1051,13 +1051,13 @@ header .logo img {
   .network .panel h3 { color: #ffdfd6; }
   .network .panel p  { color: #e6edf7; }
 
-  /* 紐⑤컮?? CTA 踰꾪듉 ?믪씠 ?듭씪 */
+  /* 기본 리셋 */
   .hero-ctas .btn-ghost,
   .hero-ctas .btn-estimate {
     min-height: 56px;
   }
 
-  /* 紐⑤컮?? ?곷떞 踰꾪듉 ?띿뒪???몃줈 ?뺣젹 */
+  /* 기본 리셋 */
   .btn-estimate {
     flex-direction: column;
     align-items: center;
@@ -1115,6 +1115,7 @@ header .logo img {
     width: 65%;
     max-width: none;
     height: 100%;
+    max-height: 100vh;
     background: linear-gradient(180deg, #1a2f4d 0%, #162741 100%);
     box-shadow: -8px 0 24px rgba(0,0,0,0.32);
     border-left: 1px solid rgba(255,255,255,0.08);
@@ -1122,11 +1123,15 @@ header .logo img {
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 60px;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
     z-index: 1200;
     opacity: 0;
     transform: translateX(100%);
     pointer-events: none;
     transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
 
   nav.active {
@@ -1161,7 +1166,7 @@ header .logo img {
     background: transparent;
     border: none;
     box-shadow: none;
-    pointer-events: none; /* 硫붿씤 硫붾돱 ?대┃ 鍮꾪솢?깊솕 */
+    pointer-events: none; /* 헤더 레이아웃 */
     cursor: default;
     transition: none;
     position: relative;
@@ -1211,7 +1216,7 @@ header .logo img {
     color: #f5f7fb;
     background: rgba(255,255,255,0.08);
     border-radius: 10px;
-    pointer-events: auto; /* ?쒕툕硫붾돱???대┃ 媛??*/
+    pointer-events: auto; /* 헤더 레이아웃 */
     transition: none;
     transform: none !important;
     text-align: center;
@@ -1227,7 +1232,7 @@ header .logo img {
 
   .submenu li a::after { display: none !important; content: "" !important; }
 
-  /* 紐⑤컮??硫붾돱 hover/?대┃/?대룞 ?꾩쟾 李⑤떒 */
+  /* 기본 리셋 */
   nav ul li,
   nav ul li a,
   .submenu li,
@@ -1283,6 +1288,7 @@ header .logo img {
 
   body.nav-open {
     position: relative;
+    overflow: hidden;
   }
 
   body.nav-open::after {
@@ -1292,7 +1298,7 @@ header .logo img {
     background: transparent;
     backdrop-filter: none;
     z-index: 900;
-    pointer-events: none; /* ?ㅻ쾭?덉씠留??쒖떆 */
+    pointer-events: none; /* 헤더 레이아웃 */
   }
 
   .nav-overlay {
@@ -1325,13 +1331,13 @@ header .logo img {
     transform-origin: center;
   }
 
-  /* ?ㅻ퉬 ?대졇?????꾨쾭嫄??됱긽 ?鍮?媛뺥솕 */
+  /* 기본 리셋 */
   body.nav-open .hamburger span {
     background: #e53935;
     box-shadow: 0 1px 3px rgba(0,0,0,0.18);
   }
 
-  /* ?꾨쾭嫄?硫붾돱 hover/?대┃ ?④낵 ?꾨㈃ 李⑤떒 */
+  /* 기본 리셋 */
   nav ul li,
   nav ul li *,
   .submenu,
@@ -1353,7 +1359,7 @@ header .logo img {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* 紐⑤컮?? 蹂몃Ц ?鍮?媛쒖꽑 */
+  /* 기본 리셋 */
   .section-header h2,
   .section-header p,
   .section-desc {
@@ -1405,6 +1411,61 @@ header .logo img {
     margin: 0 16px 70px;
     padding: 36px 18px 42px;
   }
+
+  /* 서브페이지 모바일 레이아웃 */
+  .sub-hero {
+    padding: 110px 18px 70px;
+    text-align: left;
+  }
+
+  .sub-hero .banner-content {
+    max-width: 540px;
+    margin: 0;
+    padding: 18px 16px;
+    background: rgba(8, 18, 38, 0.58);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 16px 34px rgba(0,0,0,0.28);
+  }
+
+  .sub-hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.28;
+  }
+
+  .sub-hero p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .sub-wrap {
+    margin: -28px auto 80px;
+    padding: 0 16px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .info-card {
+    padding: 16px 16px 18px;
+  }
+
+  .info-card p,
+  .sub-bullets {
+    font-size: 0.92rem;
+  }
+
+  .photo-card img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .photo-caption {
+    padding: 10px 12px 12px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width: 769px) {
@@ -1426,7 +1487,7 @@ header .logo img {
     align-items: center;
   }
 
-  /* PC ?쒕툕硫붾돱 怨좉툒 ?ㅽ???*/
+  /* 기본 리셋 */
   nav ul li:hover > a {
     color: #e53935;
   }
@@ -1493,4 +1554,5 @@ header .logo img {
     transform: scaleX(1);
   }
 }
+
 
