@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>媛쒖“/?명뀒由ъ뼱 ?쒕퉬??| BS 遺?곗빻?뚯씠??/title>
+  <meta name="description" content="而⑦뀒?대꼫 ?⑥뿴쨌諛⑹쓬 蹂닿컯, 李승룸룄???대룞, ?대? 留덇컧怨??명뀒由ъ뼱, 諛곗꽑 ?ъ젙鍮꾧퉴吏 ?ъ씤??媛쒖“ ?쒕퉬??">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">Service</p>
+      <h1>媛쒖“ / ?명뀒由ъ뼱</h1>
+      <p>湲곗〈 而⑦뀒?대꼫???⑥뿴 蹂닿컯遺???명뀒由ъ뼱, 諛곗꽑 ?ъ젙鍮꾧퉴吏 ?ъ씤?먯쑝濡?吏꾪뻾?⑸땲??</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>媛쒖“</h3>
+        <ul class="sub-bullets">
+          <li>李승룸룄???대룞/異붽?, ?⑥뿴쨌諛⑹쓬 蹂닿컯</li>
+          <li>諛붾떏쨌?대꼍 留덇컧 援먯껜, ?멸? 由щ돱??/li>
+          <li>諛곗꽑쨌議곕챸쨌?섍린 ?щ같移?/li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>?명뀒由ъ뼱</h3>
+        <ul class="sub-bullets">
+          <li>紐⑷났/?꾩옣/諛붾떏??議곕챸 ?⑦궎吏</li>
+          <li>媛援?룹꽕鍮?諛곗튂 而⑥꽕??/li>
+          <li>釉뚮옖???ъ씤臾??쒖옉 吏??/li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>吏??/h3>
+        <ul class="sub-bullets">
+          <li>?꾩옣 ?ㅼ륫 諛?寃ъ쟻/?쇱젙 怨듭쑀</li>
+          <li>?쒓났? 諛⑸Ц, 湲닿툒 A/S ???/li>
+          <li>?꾩슂 ???대룞/?댁쟾 ?ㅼ튂 吏??/li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+<!-- MR Script Ver 2.0 -->
+<script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=sjwcfMj" charset="UTF-8"></script>
+<!-- MR Script END Ver 2.0 -->
+</body>
+</html>
+
+

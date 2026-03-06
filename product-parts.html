@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>而⑦뀒?대꼫 遺??| BS 遺?곗빻?뚯씠??/title>
+  <meta name="description" content="?⑥뿴??룹갹?맞룸룄?는룻솚湲걔룹쟾湲??먯옱 ??而⑦뀒?대꼫 遺??怨듦툒 諛??ㅼ튂 吏??">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">Product</p>
+      <h1>而⑦뀒?대꼫 遺??/h1>
+      <p>?⑥뿴쨌李쏀샇쨌?꾩뼱 ??援먯껜/異붽? 遺?덉쓣 ?좎냽??怨듦툒?⑸땲??</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>二쇱슂 ?덈ぉ</h3>
+        <ul class="sub-bullets">
+          <li>?⑥뿴 ?⑤꼸, 諛붾떏?? 諛⑹닔 ?먯옱</li>
+          <li>?꾩뼱쨌李쏀샇쨌?좉툑?μ튂</li>
+          <li>?섍린援? ?꾨벑, 肄섏꽱?? 諛곗꽑 ?먯옱</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>?쒕퉬??/h3>
+        <ul class="sub-bullets">
+          <li>?꾩옣 洹쒓꺽 ?뺤씤 ??留욎땄 怨듦툒</li>
+          <li>援먯껜/?ㅼ튂 ?묒뾽 吏???щ쭩 ??</li>
+          <li>湲닿툒 A/S 遺???곗꽑 異쒓퀬</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>臾몄쓽</h3>
+        <p>?꾩슂 遺?덇낵 洹쒓꺽???뚮젮二쇱떆硫?媛??鍮좊Ⅸ ?⑷린? ?⑸━?곸씤 寃ъ쟻???쒖븞?쒕┰?덈떎.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+<!-- MR Script Ver 2.0 -->
+<script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=sjwcfMj" charset="UTF-8"></script>
+<!-- MR Script END Ver 2.0 -->
+</body>
+</html>
+
+

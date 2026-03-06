@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?고쁺 | BS 遺?곗빻?뚯씠??/title>
+    <meta name="description" content="BS 遺?곗빻?뚯씠??李쎈┰遺???꾩옱源뚯????깆옣 ?고쁺怨??쒕퉬???뺤옣 湲곕줉.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="subpage">
+  <section class="banner sub-hero">
+    <div class="banner-content">
+      <p class="eyebrow">History</p>
+      <h1>?뚯궗 ?고쁺</h1>
+      <p>李쎈┰遺??吏湲덇퉴吏, ?덉쟾怨??좊ː瑜?湲곗??쇰줈 ?깆옣?댁삩 諛쒖옄痍⑥엯?덈떎.</p>
+    </div>
+  </section>
+
+  <section class="sub-wrap">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>二쇱슂 ?고쁺</h3>
+        <ul class="timeline">
+          <li><span class="year">2023</span><span class="desc">?뱀닔/留욎땄 而⑦뀒?대꼫 ?ㅺ퀎? ?좎꽕, 怨듭젙 愿由??쒖뒪??媛쒖꽑</span></li>
+          <li><span class="year">2020</span><span class="desc">留욎땄 ?쒖옉 ?쒕퉬???뺣?, ?⑥뿴/諛⑹쓬 紐⑤뱢 ?쇱씤 ?낃렇?덉씠??/span></li>
+          <li><span class="year">2016</span><span class="desc">以묎퀬쨌?꾨? 而⑦뀒?대꼫 ?꾨떞? ?댁쁺, A/S 泥닿퀎 媛뺥솕</span></li>
+          <li><span class="year">2010</span><span class="desc">BS 遺?곗빻?뚯씠??李쎈┰, 遺?걔룰꼍??湲곕컲 ?쒓났 ?쒖옉</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>?꾩옱??BS</h3>
+        <ul class="sub-bullets">
+          <li>?먮ℓ쨌?꾨?쨌媛쒖“瑜??꾩슦瑜대뒗 ?먯뒪??而⑦뀒?대꼫 ?붾（??/li>
+          <li>?꾩옣 ?ㅼ륫 ???ㅺ퀎 ???쒖옉 ???ㅼ튂 ???ы썑愿由??쇨큵 ?섑뻾</li>
+        </ul>
+        <p style="margin-top:12px; color:#4a5565;">?욎쑝濡쒕룄 ?щ챸??寃ъ쟻怨??좎냽???쒓났?쇰줈 ?좊ː瑜??댁뼱媛寃좎뒿?덈떎.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  const loadFragment = (targetId, file, cb) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        el.innerHTML = html;
+        if (cb) cb();
+      });
+  };
+
+  const initNav = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+    if (!hamburger || !nav) return;
+
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('active');
+      body.classList.remove('nav-open');
+      overlay.classList.remove('show');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('active');
+      nav.classList.toggle('active', willOpen);
+      body.classList.toggle('nav-open', willOpen);
+      overlay.classList.toggle('show', willOpen);
+    });
+
+    overlay.addEventListener('click', closeNav);
+  };
+
+  loadFragment('header', 'header.html', initNav);
+  loadFragment('footer', 'footer.html');
+</script>
+<!-- MR Script Ver 2.0 -->
+<script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=sjwcfMj" charset="UTF-8"></script>
+<!-- MR Script END Ver 2.0 -->
+</body>
+</html>
+
+
